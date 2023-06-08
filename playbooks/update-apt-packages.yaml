@@ -4,6 +4,4 @@
   become: true
   tasks:
     - name: update apt packages
-      apt:
-        upgrade: yes
-        update_cache: yes
+      ping -c 5 192.168.1.3
