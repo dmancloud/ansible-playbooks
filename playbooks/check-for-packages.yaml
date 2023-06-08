@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-  - name: make sure net-tools are installed on all nodes
+  - name: make sure standard tools are installed
     apt:
       name: wget
       state: present
