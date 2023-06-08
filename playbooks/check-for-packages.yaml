@@ -4,5 +4,5 @@
   tasks:
   - name: make sure standard tools are installed
     apt:
-      name: wget
+      name: wget net-tools
       state: present
