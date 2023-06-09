@@ -2,6 +2,12 @@
 - hosts: all
   become: yes
   tasks:
-  - name: make sure standard tools are installed
-    apt:
-      - dnsutils
+    - name: Update apt cache and install packages
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+      loop:
+        - vim
+        - curl
+        - unzip
+        - dnsutils
